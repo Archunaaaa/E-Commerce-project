@@ -14,7 +14,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 640) {
+      if (window.innerWidth >= 640 && menuOpen) {
         setMenuOpen(false);
       }
     };
@@ -23,7 +23,7 @@ export default function Header() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [menuOpen]);
 
   const mobileNav = (
     <div
@@ -35,7 +35,7 @@ export default function Header() {
   );
 
   return (
-    <div className="w-full bg-white sticky top-0 z-10 drop-shadow-md">
+    <div className="w-full bg-white sticky top-0 z-10 shadow-md">
       <div className="flex justify-between p-2 pl-5 pr-4 items-center flex-wrap">
         <div className="sm:hidden">
           {menuOpen ? (
@@ -63,16 +63,14 @@ export default function Header() {
           />
           <ul className="flex flex-col p-4 m-8 font-bold">
             {nav.map((list) => (
-              <div className="mb-3" key={list.path}>
-                <NavItem to={list.path} label={list.text} />
-              </div>
+              <NavItem to={list.path} label={list.text} key={list.path} />
             ))}
           </ul>
         </div>
         <div className="hidden sm:flex">
           <ul className="flex font-semibold uppercase">
             {nav.map((item) => (
-              <NavItem key={item.path} to={item.path} label={item.text} />
+              <NavItem to={item.path} label={item.text} key={item.path} />
             ))}
           </ul>
         </div>

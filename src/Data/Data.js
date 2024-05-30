@@ -6,8 +6,8 @@ export const nav = [
     text: "Home",
   },
   {
-    path: "/features",
-    text: "Features",
+    path: "/feature",
+    text: "Feature",
   },
   {
     path: "/shop",
@@ -15,7 +15,7 @@ export const nav = [
   },
   {
     path: "/page",
-    text: "Pages",
+    text: "Page",
   },
   {
     path: "/blog",
@@ -60,36 +60,36 @@ export const sliderdata = [
   },
 ];
 
-// export const category = [
-//   {
-//     img: "../img/category/category1.png",
-//     category: "Bedroom",
-//   },
-//   {
-//     img: "../img/category/category7.png",
-//     category: "OFfice",
-//   },
-//   {
-//     img: "../img/category/category6.png",
-//     category: "Lighting",
-//   },
-//   {
-//     img: "../img/category/category5.png",
-//     category: "bathroom",
-//   },
-//   {
-//     img: "../img/category/category4.png",
-//     category: "kitchen",
-//   },
-//   {
-//     img: "../img/category/category3.png",
-//     category: "Interior",
-//   },
-//   {
-//     img: "../img/category/category2.png",
-//     category: "Livingroom",
-//   },
-// ];
+export const category = [
+  {
+    img: "../img/category/category1.png",
+    category: "Bedroom",
+  },
+  {
+    img: "../img/category/category7.png",
+    category: "OFfice",
+  },
+  {
+    img: "../img/category/category6.png",
+    category: "Lighting",
+  },
+  {
+    img: "../img/category/category5.png",
+    category: "bathroom",
+  },
+  {
+    img: "../img/category/category4.png",
+    category: "kitchen",
+  },
+  {
+    img: "../img/category/category3.png",
+    category: "Interior",
+  },
+  {
+    img: "../img/category/category2.png",
+    category: "Livingroom",
+  },
+];
 
 export const products = [
   {

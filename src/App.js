@@ -1,21 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './Common/Header';
-import Home from './Pages/Home'; 
+import React from "react";
+import Header from "./Common/Header";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from "./Page/Home";
+import Feature from "./Page/Feature";
+import Footer from "./Common/Footer";
 
-
-function App() {
+export default function App() {
   return (
-    <Router>
-      <div>
+    <>
+      <Router>
         <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </div>
-    </Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/feature" element={<Feature />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </> 
   );
 }
-
-export default App;
-
