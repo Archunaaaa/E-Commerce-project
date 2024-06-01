@@ -1,17 +1,15 @@
-import { useDispatch, useSelector } from "react-redux";
-import "./../Main.css";
-import { useEffect } from "react";
-import { getCartTotal, removeItem, updateQuantity } from "../Redux/CartSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { getCartTotal, removeItem, updateQuantity } from '../Redux/CartSlice';
+import './../Main.css';
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const { data: cartProducts, totalAmount } = useSelector(
-    (state) => state.cart
-  );
+  const { data: cartProducts, totalAmount } = useSelector((state) => state.cart);
 
   useEffect(() => {
     dispatch(getCartTotal());
-  }, [dispatch, cartProducts]); // Dependencies updated to avoid frequent re-renders
+  }, [cartProducts, dispatch]);
 
   const handleRemoveItem = (itemId) => {
     dispatch(removeItem({ id: itemId }));
@@ -37,13 +35,13 @@ const Cart = () => {
           <p className="font-bold text-2xl text-center">Your cart is empty</p>
         ) : (
           <ul className="cart-img p-2">
-            {cartProducts.map((item) => (
-              <li key={item.id} className="mb-2 flex justify-between items-center">
+            {cartProducts.map((item, index) => (
+              <li key={index} className="mb-2 flex justify-between items-center">
                 <div className="flex items-center">
                   <img className="img" src={item.img} alt={item.name} />
                   <div className="ml-4">
                     <p className="font-semibold">{item.name}</p>
-                    <p className="text-gray-600">${item.price}</p>
+                    <p className="ml-2 text-gray-600">${item.price}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -54,7 +52,9 @@ const Cart = () => {
                     >
                       <i className="fa fa-minus"></i>
                     </button>
-                    <span className="px-2 text-xl font-bold">{item.quantity || 1}</span>
+                    <span className="px-2 text-xl font-bold">
+                      {item.quantity || 1}
+                    </span>
                     <button
                       onClick={() => increaseQty(item.id, item.quantity)}
                       className="btn btn-sm btn-plus rounded-circle bg-light border"
@@ -63,17 +63,17 @@ const Cart = () => {
                     </button>
                   </div>
                   <span className="font-bold ml-4">${item.totalPrice}</span>
-                  <button
-                    className="ml-4 bg-black text-white text-xl p-2 hover:bg-red-500"
-                    onClick={() => handleRemoveItem(item.id)}
-                  >
-                    <i className="fa fa-close"></i>
-                  </button>
+                </div>
+                <div
+                  className="bg-black text-white text-xl px-2 py-1 hover:bg-red-500 cursor-pointer"
+                  onClick={() => handleRemoveItem(item.id)}
+                >
+                  <i className="fa fa-close"></i>
                 </div>
               </li>
             ))}
-            <div className="bg-black text-white text-2xl uppercase p-2">
-              ${totalAmount}
+            <div className="bg-black text-white text-2xl uppercase p-2 mt-4">
+              Total: ${totalAmount}
             </div>
           </ul>
         )}
