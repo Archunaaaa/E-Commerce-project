@@ -17,10 +17,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './Redux/Store'; // Ensure the path to your store is correct
+import store from './Redux/Store'; 
 import App from './App';
 import './App.css';
-import './Components/FontAwesome'; // Ensure the path is correct
+import './Components/FontAwesome'; 
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+// import { FaBars, FaTimes } from "react-icons/fa";
 import Icons from "../Components/Icons";
 import { nav } from "../Data/Data";
 import NavItem from "../Components/NavItem";
-
+import './../Style.css';
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -39,13 +39,13 @@ export default function Header() {
     <>
       <div
         className={
-          menuOpen ? "" : "w-full bg-white sticky top-0 z-10 drop-shadow-md"
+          menuOpen ? "" : "w-full  bg-white sticky top-0 z-10 drop-shadow-md"
         }
       >
-        <div className="flex justify-between p-2 pl-5 pr-4 items-center flex-wrap">
-          <div className="sm:hidden">
+        <div className="fixed flex justify-between   p-2 pl-5 pr-4 items-center flex-wrap">
+          {/* <div className="sm:hidden">
             {menuOpen ? "" : <FaBars onClick={handleToggleMenu} />}
-          </div>
+          </div> */}
           <div>
             <Link to={"/"} className="font-bold text-3xl">
               WOOD<span className="text-yellow-500">COM</span>
@@ -57,20 +57,20 @@ export default function Header() {
               menuOpen
                 ? "transform translate-x-0"
                 : "transform -translate-x-full"
-            } sm:flex bg-white fixed inset-y-0 left-0 z-50 w-64 overflow-y-auto transition-transform ease-in-out duration-300`}
+            } bg-white fixed inset-y-0 left-0 z-50 w-64 overflow-y-auto transition-transform ease-in-out duration-300`}
             style={{ zIndex: "11111" }}
           >
-            <FaTimes
+            {/* <FaTimes
               onClick={handleToggleMenu}
               className="absolute top-3 right-3"
-            />
-            <ul className="flex flex-col p-4 m-8 font-bold">
+            /> */}
+            {/* <ul className="flex flex-col p-4 m-8 font-bold">
               {nav.map((list, key) => (
                 <div className="mb-3">
                   <NavItem key={key} to={list.path} label={list.text} />
                 </div>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div className="hidden sm:flex">
             <ul className="flex font-semibold uppercase">
