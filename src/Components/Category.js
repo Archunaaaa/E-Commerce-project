@@ -8,6 +8,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import "./../Main.css";
+import './../Style.css';
 
 const NextArrow = (props) => (
   <div {...props} className="slick-arrow next-arrow">
@@ -57,7 +58,7 @@ const Category = () => {
       <Slider {...settings}>
         {category.map((item, index) => (
           <div key={index}>
-            <div className="max-w-xs m-4 transition-transform transform hover:scale-105 hover:text-red-600">
+            <div className="">
               <div className="bg-gray-100 p-12 hover:bg-white hover:shadow-md transition-all duration-300">
                 <img
                   src={item.img}
@@ -65,7 +66,7 @@ const Category = () => {
                   alt={item.category}
                   className="mx-auto"
                 />
-                <div className="mt-4">
+                <div className="mt-">
                   <div className="font-semibold uppercase">{item.category}</div>
                 </div>
               </div>

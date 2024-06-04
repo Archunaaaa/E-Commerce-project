@@ -67,7 +67,7 @@ export const category = [
   },
   {
     img: "../img/category/category7.png",
-    category: "OFfice",
+    category: "Office",
   },
   {
     img: "../img/category/category6.png",

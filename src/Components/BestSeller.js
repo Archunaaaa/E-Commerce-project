@@ -1,7 +1,7 @@
 import { products } from "../Data/Data";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Heading from "..//Common/Heading";
+import Heading from "../Common/Heading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
@@ -42,7 +42,7 @@ const Category = () => {
   };
 
   return (
-    <div className="bg-white mt-16 text-center">
+    <div className="bg-white mt-16 text-centers">
       <Heading
         title="Best Seller"
         description="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY"

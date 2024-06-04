@@ -1,4 +1,4 @@
-/* .slick-arrow {
+.slick-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -74,4 +74,4 @@ svg {
   padding: 4px;
   font-size: 14px;
   font-weight: lighter;
-} */
+}

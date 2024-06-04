@@ -55,7 +55,7 @@ const Popular = () => {
   };
 
   return (
-    <div className="mt-16 overflow-hidden text-center relative ">
+    <div className="mt-16 overflow-hidden text-centers relative ">
       <Heading
         title="top Populars"
         description="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY"

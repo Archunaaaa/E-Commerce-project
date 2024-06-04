@@ -71,7 +71,7 @@ const Arrival = () => {
   };
 
   return (
-    <div className="p-8 overflow-hidden text-center relative bg-gray-50 z-0">
+    <div className="p-8 overflow-hidden text-centers relative bg-gray-50 z-0">
       <Heading
         title="New Arrival"
         description="SHOP THE NEW SELECTION OF NEW ARRIVALS AT OUR STORE. FILL OUT YOUR

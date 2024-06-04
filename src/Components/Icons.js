@@ -39,7 +39,7 @@ const Icons = () => {
               <span
                 className="absolute top-2 right-2 cursor-pointer text-gray-600"
                 onClick={hideRightBar}
-              >
+              >   
                 <FontAwesomeIcon icon={faTimes} />
               </span>
             </div>

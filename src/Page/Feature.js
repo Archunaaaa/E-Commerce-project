@@ -1,7 +1,7 @@
 import React from "react";
 
 const Feature = () => {
-  return <div>Features</div>;
+  return <div></div>;
 };
 
 export default Feature;
