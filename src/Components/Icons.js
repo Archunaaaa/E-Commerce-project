@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faShoppingCart, faTimes } from "@fortawesome/free-solid-svg-icons";
+import "./FontAwesome";
 import Cart from "../Common/Cart";
 import { useSelector } from "react-redux";
-import "../Components/FontAwesome"; // Ensure this file sets up FontAwesome library
-
+import './../Style.css';
 const Icons = () => {
   const { totalItems } = useSelector((state) => state.cart);
 
@@ -19,37 +18,37 @@ const Icons = () => {
   };
 
   return (
-    <div className="flex items-center">
-      <div className="mx-2">
-        <FontAwesomeIcon
-          icon={faHeart}
-          className="hover:text-red-500 text-2xl cursor-pointer"
-        />
-      </div>
-      <div className="relative mx-2">
-        <FontAwesomeIcon
-          icon={faShoppingCart}
-          className="hover:text-red-500 text-2xl cursor-pointer"
-          onClick={showRightBar}
-        />
-        {showSidebar && (
-          <div className="fixed top-0 right-0 w-80 h-full bg-white shadow-lg z-50">
-            <div className="relative h-full">
+    <>
+      <div className="flex">
+        <div> 
+          <FontAwesomeIcon
+            icon="heart"
+            className="hover:text-red-500 text-2xl"
+          />
+        </div>
+        <div className="relative">
+          <FontAwesomeIcon
+            icon="fa-shopping-cart"
+            className="hover:text-red-500 text-2xl cursor-pointer"
+            onClick={showRightBar}
+          />
+          {showSidebar && (
+            <div className="fixed top-15 right-0 w-80">
               <Cart />
               <span
                 className="absolute top-2 right-2 cursor-pointer text-gray-600"
                 onClick={hideRightBar}
-              >   
-                <FontAwesomeIcon icon={faTimes} />
+              >
+                <FontAwesomeIcon icon="fa fa-close" />
               </span>
             </div>
-          </div>
-        )}
-        <span className="absolute -top-1 -right-2 bg-red-600 text-white rounded-full p-1 text-xs">
-          {totalItems}
-        </span>
+          )}
+          <span className="absolute -top-1 text-white -right-2 bg-red-600 rounded-full p-1">
+            {totalItems}
+          </span>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

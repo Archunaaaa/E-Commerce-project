@@ -34,7 +34,6 @@ const Category = () => {
     const newItems = products.filter((item) => item.name === name);
     setMenuItem(newItems);
 
-    // for all data show
     if (name === "all") {
       setMenuItem(products);
       return;

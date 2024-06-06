@@ -7,6 +7,13 @@
 .p-2 {
   padding: 0.5rem;
 }
+a{
+  color: inherit;
+  text-decoration: inherit;
+  padding: 10px;
+  /* margin-left: 20px; */
+  justify-content: space-evenly;
+}
 .text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
@@ -128,7 +135,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 }
 .p-12 {
   padding: 3rem;
+  margin-left: 15px;
 }
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -218,11 +227,12 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 .p-4 {
   padding: 1rem;
 }
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+  
 button, [role="button"] {
   cursor: pointer;
 }
@@ -597,7 +607,44 @@ img {
 }
 .right-0 {
     right: 0px;
+
 }
 .absolute {
     position: absolute;
+}
+ 
+  .sm\:flex {
+      display: flex;
+      /* justify-content: space-between; */
+      margin: auto
+  }
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.p-12 {
+  padding: 3rem;
+}
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.h-screen {
+  height: 20vh;
 }
