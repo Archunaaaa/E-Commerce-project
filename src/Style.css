@@ -60,7 +60,7 @@ a{
 }
 
 .-right-2 {
-  right: -0rem;
+  right: -0.5rem;
 }
 .absolute {
   position: absolute;
@@ -621,7 +621,7 @@ img {
   border-bottom-width: 2px;
 }
 .h-screen {
-  height: 20vh;
+  height: 100vh;
 }
 .text-gray-600 {
   --tw-text-opacity: 1;
@@ -651,3 +651,17 @@ img {
 .top-0 {
   top: 0px;
 }
+.w-80 {
+  width: 20rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+.fixed {
+  position: fixed;
+}
+.justify-between {
+  justify-content: space-between;
+}
+ 

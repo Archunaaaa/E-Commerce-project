@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import { FaBars, FaTimes } from "react-icons/fa";
+import './../Style.css';
 import Icons from "../Components/Icons";
 import { nav } from "../Data/Data";
 import NavItem from "../Components/NavItem";
-import './../Style.css';
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleToggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,7 +26,6 @@ export default function Header() {
       className={`${
         menuOpen ? "fixed inset-0 bg-gray-800 bg-opacity-50 z-50" : "hidden"
       } sm:hidden`}
-      onClick={handleToggleMenu}
       style={{ zIndex: "9999" }}
     ></div>
   );
@@ -39,10 +34,12 @@ export default function Header() {
     <>
       <div
         className={
-          menuOpen ? "" : "w-full  bg-white sticky top-0 z-10 drop-shadow-md"
+          menuOpen ? "" : "w-full bg-white sticky top-0 z-10 drop-shadow-md"
         }
       >
-        <div className="fixed flex justify-between   p-2 pl-5 pr-4 items-center flex-wrap">
+        <div className="flex justify-between p-2 pl-5 pr-4 items-center flex-wrap">
+          <div className="sm:hidden">
+          </div>
           <div>
             <Link to={"/"} className="font-bold text-3xl">
               WOOD<span className="text-yellow-500">COM</span>
@@ -54,7 +51,7 @@ export default function Header() {
               menuOpen
                 ? "transform translate-x-0"
                 : "transform -translate-x-full"
-            } bg-white fixed inset-y-0 left-0 z-50 w-64 overflow-y-auto transition-transform ease-in-out duration-300`}
+            } sm:flex bg-white fixed inset-y-0 left-0 z-50 w-64 overflow-y-auto transition-transform ease-in-out duration-300`}
             style={{ zIndex: "11111" }}
           >
           </div>
